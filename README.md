@@ -2,7 +2,7 @@
 How To Deploy Vue using heroku
 ### 1.Create Your Heroku App
  Let’s create our Heroku app:
- #### heroku create <YOUR-PROJECT-NAME-HERE>
+ * #### heroku create <YOUR-PROJECT-NAME-HERE>
  * In order to avoid having Heroku install needless development dependencies when deploying later, set the NODE_ENV setting   * to production :
  ## heroku config:set NODE_ENV=production --app <YOUR-PROJECT-NAME-HERE>
 
@@ -16,27 +16,27 @@ How To Deploy Vue using heroku
 
 #### In the server.js add this:
 
-var express = require('express');
-var path = require('path');
-var serveStatic = require('serve-static');
+* var express = require('express');
+* var path = require('path');
+* var serveStatic = require('serve-static');
 
-app = express();
-app.use(serveStatic(__dirname + "/dist"));
+* app = express();
+* app.use(serveStatic(__dirname + "/dist"));
 
-var port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log('server started '+ port);
+* var port = process.env.PORT || 5000;
+* app.listen(port);
+*
+* console.log('server started '+ port);
 
 #### IMPORTANT: What you probably noticed is that this will serve up a dist directory. dist is a predefined directory that Vue.js builds which is a compressed, minified version of your site. We’ll build this and then tell Heroku to run server.js so Heroku hosts up this dist directory:
 
 #### npm run build
 
-You should see an output dist directory now.
+* You should see an output dist directory now.
 
-Let’s test our server.js file by running it:
+Let’s test our server.js file by running this:
 
-#### node server.js
+* #### node server.js
 
 * Now go to http://localhost:5000 and make sure your app loads. This is the actual site Heroku will serve up.
 
@@ -63,7 +63,7 @@ Heroku allows us to push to a remote repository so we’ll first need to create 
 
 * Now let’s add our Heroku remote repository:
 
-#### heroku git:remote --app <YOUR-PROJECT-NAME-HERE>
+* #### heroku git:remote --app <YOUR-PROJECT-NAME-HERE>
 
 Let’s keep our generated dist directory so that we can always keep a pristine copy of what we’ve deployed to Heroku by removing dist/ from .gitigore
 
@@ -86,8 +86,8 @@ selenium-debug.log
 
 * Now, most importantly, let’s add and commit our code files:
 
-#### git add . && git commit -a -m "Adding files."
+* #### git add . && git commit -a -m "Adding files."
 
 ### 4. Push Your Code to Deploy!
 
- #### git push heroku master
+ * #### git push heroku master
