@@ -42,17 +42,17 @@ Let’s test our server.js file by running this:
 
 * Lastly, we’ll have to edit our start script in package.json to start our node server, as Heroku will automatically look * * for this script when looking for how to run a node.js app.
 
-// package.json
-{
-  "name": "<YOUR-PROJECT-NAME-HERE>",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "",
-  "private": true,
-  "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "start": "node server.js",   <--- EDIT THIS LINE HERE 
+* // package.json
+* {
+ * "name": "<YOUR-PROJECT-NAME-HERE>",
+ * "version": "1.0.0",
+ * "description": "A Vue.js project",
+ * "author": "",
+ * "private": true,
+ * "scripts": {
+ *  "dev": "node build/dev-server.js",
+ *  "build": "node build/build.js",
+ * "start": "node server.js",   <--- EDIT THIS LINE HERE 
 ...
 
 ### 3. Git Init and Add Your Heroku Remote Repository
@@ -67,22 +67,22 @@ Heroku allows us to push to a remote repository so we’ll first need to create 
 
 Let’s keep our generated dist directory so that we can always keep a pristine copy of what we’ve deployed to Heroku by removing dist/ from .gitigore
 
-.DS_Store
-node_modules/
-dist/  <--- REMOVE THIS LINE
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
+*.DS_Store
+*node_modules/
+*dist/  <--- REMOVE THIS LINE
+*npm-debug.log*
+*yarn-debug.log*
+*yarn-error.log*
+*test/unit/coverage
+*test/e2e/reports
+*selenium-debug.log
 
 #### Editor directories and files Make sure it contains this files bellow
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.idea
+**.suo
+**.ntvs*
+**.njsproj
+**.sln
 
 * Now, most importantly, let’s add and commit our code files:
 
