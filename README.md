@@ -10,7 +10,7 @@ How To Deploy Vue using heroku
 
 * Since Vue is only a frontend library, the easiest way to host it and do things like serve up assets is to create a simple * Express friendly script that Heroku can use to start a mini-web server like  express:
 
- #### npm install express --save
+ * #### npm install express --save
 
 * create a server.js file to your project’s root directory:
 
